@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace SolarCoffee.Data.Models
+namespace SolarCoffee.Web.ViewModels
 {
-    public class Product 
+ /// <summary>
+ /// DTO
+ /// </summary>
+    public class productModel
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
-        public DateTime UpdatedOn { get; set; }
-        
-        [MaxLength(64)]
-        public String Name { get; set; }
-        [MaxLength(128)]
+        public DateTime UpdatedOn { get; set; }       
+        public String Name { get; set; }       
         public String Description { get; set; }
         public decimal Price { get; set; }
         public bool IsTaxable { get; set; }
         public bool IsArchived { get; set; }
-       
     }
 }
